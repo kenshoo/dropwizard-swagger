@@ -59,8 +59,8 @@ job("${NAME}-release") {
             rm -f ~/.m2/settings.xml
             ulimit -c unlimited -S
             sudo yum -y install maven
-            mvn -N io.takari:maven:wrapper
-            ./mvnw clean install
+            mvn -N io.takari:maven:wrapper -DBUILD_NUMBER=\$BUILD_NUMBER
+            ./mvnw clean install -DBUILD_NUMBER=\$BUILD_NUMBER
             ./mvnw -B deploy --settings maven_deploy_settings.xml -Dmaven.test.skip=true -Dfindbugs.skip=true -DBUILD_NUMBER=\$BUILD_NUMBER
             """)
     }
