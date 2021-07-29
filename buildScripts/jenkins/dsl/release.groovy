@@ -72,18 +72,21 @@ job("${NAME}-release") {
             triggers {
                 unstable {
                     sendTo {
+                        recipientList()
                         requester()
                         developers()
                     }
                 }
                 failure {
                     sendTo {
+                        recipientList()
                         requester()
                         developers()
                     }
                 }
                 statusChanged {
                     sendTo {
+                        recipientList()
                         requester()
                         developers()
                     }
