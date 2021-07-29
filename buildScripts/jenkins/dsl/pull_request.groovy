@@ -61,7 +61,6 @@ job("${NAME}-pull-request") {
             sudo yum -y install maven
             mvn -N io.takari:maven:wrapper
             ./mvnw clean install
-            ./mvnw -B cobertura:cobertura
             """)
     }
 
