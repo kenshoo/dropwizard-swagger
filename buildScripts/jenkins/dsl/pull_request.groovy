@@ -58,7 +58,7 @@ job("${NAME}-pull-request") {
         shell("""
             rm -f ~/.m2/settings.xml
             ulimit -c unlimited -S
-            sudo yum install maven
+            sudo yum -y install maven
             mvn -N io.takari:maven:wrapper
             ./mvnw clean install
             ./mvnw -B cobertura:cobertura coveralls:report
