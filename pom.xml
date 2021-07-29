@@ -153,18 +153,12 @@
         </dependency>
     </dependencies>
 
-    <profiles>
-        <profile>
-            <id>release</id>
-            <properties>
-                <maven.compiler.optimize>true</maven.compiler.optimize>
-            </properties>
-            <build>
-                <plugins>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
+    <distributionManagement>
+        <repository>
+            <id>artifactory-release</id>
+            <url>http://artifactory.aws-kenshoo.com/artifactory/libs-release/</url>
+        </repository>
+    </distributionManagement>
 
     <build>
         <plugins>
