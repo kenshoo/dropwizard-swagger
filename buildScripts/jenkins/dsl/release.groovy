@@ -66,7 +66,7 @@ job("${NAME}-release") {
     }
 
     publishers {
-        archiveJunit('**/test-results/TEST-*.xml, **/test-results/*/TEST-*.xml, **/test-results.xml')
+        archiveJunit('**/surefire-reports/TEST-*.xml, **/surefire-reports/*/TEST-*.xml')
         extendedEmail {
             recipientList("${EMAIL}")
             triggers {
