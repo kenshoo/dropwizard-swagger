@@ -18,7 +18,6 @@
     </scm>
 
     <properties>
-        <revision>2.0.12.local</revision>
         <maven.compiler.release>11</maven.compiler.release>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
