@@ -61,7 +61,7 @@ job("${NAME}-release") {
             sudo yum -y install maven
             mvn -N io.takari:maven:wrapper
             ./mvnw clean install
-            ./mvnw -B cobertura:cobertura coveralls:report
+            ./mvnw -B cobertura:cobertura
             ./mvnw -B deploy --settings maven_deploy_settings.xml -Dmaven.test.skip=true -Dfindbugs.skip=true -DBUILD_NUMBER=\$BUILD_NUMBER
             """)
     }
