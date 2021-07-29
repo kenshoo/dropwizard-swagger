@@ -50,6 +50,10 @@ job("${NAME}-release") {
         }
     }
 
+    triggers {
+        githubPush()
+    }
+
     steps {
         shell("""
             rm -f ~/.m2/settings.xml
