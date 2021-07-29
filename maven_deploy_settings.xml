@@ -2,7 +2,6 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
                       http://maven.apache.org/xsd/settings-1.0.0.xsd">
-    <localRepository/>
     <interactiveMode/>
     <usePluginRegistry/>
     <offline/>
@@ -16,6 +15,32 @@
     </servers>
     <mirrors/>
     <proxies/>
-    <profiles/>
+    <profiles>
+        <id>default</id>
+        <repositories>
+            <repository>
+                <id>artifactory-plugins-release</id>
+                <name>Artifactory-plugins</name>
+                <url>https://kenshoo.jfrog.io/kenshoo/repo/</url>
+                <releases>
+                    <enabled>true</enabled>
+                </releases>
+                <snapshots>
+                    <enabled>false</enabled>
+                </snapshots>
+            </repository>
+            <repository>
+                <id>artifactory-aws-plugins-release</id>
+                <name>Artifactory-AWS-plugins</name>
+                <url>http://artifactory.aws-kenshoo.com/artifactory/libs-release/</url>
+                <releases>
+                    <enabled>true</enabled>
+                </releases>
+                <snapshots>
+                    <enabled>false</enabled>
+                </snapshots>
+            </repository>
+        </repositories>
+    </profiles>
     <activeProfiles/>
 </settings>
