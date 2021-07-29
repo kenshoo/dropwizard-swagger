@@ -15,32 +15,6 @@
     </servers>
     <mirrors/>
     <proxies/>
-    <profiles>
-        <id>default</id>
-        <repositories>
-            <repository>
-                <id>artifactory-plugins-release</id>
-                <name>Artifactory-plugins</name>
-                <url>https://kenshoo.jfrog.io/kenshoo/repo/</url>
-                <releases>
-                    <enabled>true</enabled>
-                </releases>
-                <snapshots>
-                    <enabled>false</enabled>
-                </snapshots>
-            </repository>
-            <repository>
-                <id>artifactory-aws-plugins-release</id>
-                <name>Artifactory-AWS-plugins</name>
-                <url>http://artifactory.aws-kenshoo.com/artifactory/libs-release/</url>
-                <releases>
-                    <enabled>true</enabled>
-                </releases>
-                <snapshots>
-                    <enabled>false</enabled>
-                </snapshots>
-            </repository>
-        </repositories>
-    </profiles>
+    <profiles/>
     <activeProfiles/>
 </settings>
